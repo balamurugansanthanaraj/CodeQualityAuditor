@@ -1,2 +1,2 @@
-# QualityChecker-Webhooks
-QualityChecker-Webhooks
+# CodeQualityAuditor-Webhooks
+CodeQualityAuditor-Webhooks
