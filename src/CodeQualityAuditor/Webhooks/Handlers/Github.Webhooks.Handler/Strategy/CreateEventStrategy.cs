@@ -1,11 +1,10 @@
-﻿using Github.Webhook.Handler.Strategy;
-using Github.Webhook.Handler.ViewModel.Events;
+﻿using Github.Webhook.Handler.ViewModel.Events;
 using Github.Webhooks.Handler.Extensions;
 using Webhooks.CrossCutting;
 
 namespace Github.Webhooks.Handler.Strategy
 {
-    public class CreateEventStrategy : IEventProcessStrategy
+    public class CreateEventStrategy : IEventProcessorStrategy
     {
 
         public void Process(object data)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Github.Webhooks.Handler.Services;
 using Microsoft.AspNet.WebHooks;
 
 namespace Github.Webhooks.Handler
@@ -13,8 +14,8 @@ namespace Github.Webhooks.Handler
         {
             if (!receiver.Equals("GitHub", StringComparison.CurrentCultureIgnoreCase)) return Task.FromResult(true);
 
-            //var eventProcesser = new EventProcessService();
-            //eventProcesser.Process(context.Actions, context.Data);
+            var eventProcessorService = new EventProcessorService();
+            eventProcessorService.Process(context.Actions, context.Data);
 
             return Task.FromResult(true);
         }
